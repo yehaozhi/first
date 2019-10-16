@@ -1,0 +1,23 @@
+#语法结构 
+ spring:
+  profiles:
+    active: dev     #指定当前使用的是生产环境配置
+---
+spring:
+  profiles: dev
+
+server:
+  port: 8080   #定义端口号
+  servlet:
+   context-path: /1906
+ #jdbc:
+ #jdbcUrl: 数据库连接
+ #username: root
+ #password: root   
+---  
+server:
+  port: 8090   #定义端口号
+  servlet:
+    context-path: /jt
+spring:
+  profiles: prod
